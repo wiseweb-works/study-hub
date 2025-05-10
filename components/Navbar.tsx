@@ -9,7 +9,7 @@ export default function Navbar() {
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 gap-6">
                     <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                         <Image
-                            src="./studyhub-logo.svg"
+                            src="/studyhub-logo.svg"
                             width={32}
                             height={32}
                             className="h-8"

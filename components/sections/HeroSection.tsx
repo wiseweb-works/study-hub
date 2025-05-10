@@ -15,7 +15,7 @@ export default function HeroSection() {
                             Discover
                         </button>
                         <button className="border-2 border-[#4C7EFF] text-[#4C7EFF] text-base font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition">
-                            Upload Notes
+                            Create Notes
                         </button>
                     </div>
                 </aside>
