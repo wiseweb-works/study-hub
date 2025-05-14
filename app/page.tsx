@@ -1,13 +1,13 @@
 import { HeroSection, PopularNotes } from '@/components/sections';
-import { auth, currentUser } from '@clerk/nextjs/server';
+// import { auth, currentUser } from '@clerk/nextjs/server';
 
 export default async function Page() {
-    const { userId } = await auth();
+    // const { userId } = await auth();
     // if (!userId) {
     //     return <div>Sign in to view this page</div>;
     // }
 
-    const user = await currentUser();
+    // const user = await currentUser();
 
     return (
         <>

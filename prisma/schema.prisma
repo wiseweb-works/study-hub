@@ -1,0 +1,58 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          String     @id @default(cuid())
+  createdAt   DateTime   @default(now())
+  clerkUserId String     @unique
+  email       String
+  name        String?
+  notes       Note[]
+  plans       Plan[]
+  favorites   Favorite[]
+}
+
+model Note {
+  id        String     @id @default(cuid())
+  createdAt DateTime   @default(now())
+  title     String
+  content   String
+  user      User       @relation(fields: [userId], references: [id])
+  userId    String
+  favorites Favorite[]
+}
+
+model Plan {
+  id          String     @id @default(cuid())
+  createdAt   DateTime   @default(now())
+  title       String
+  description String
+  user        User       @relation(fields: [userId], references: [id])
+  userId      String
+  favorites   Favorite[]
+}
+
+model Favorite {
+  id     String  @id @default(cuid())
+  user   User    @relation(fields: [userId], references: [id])
+  userId String
+  note   Note?   @relation(fields: [noteId], references: [id])
+  noteId String?
+  plan   Plan?   @relation(fields: [planId], references: [id])
+  planId String?
+
+  @@unique([userId, noteId, planId])
+}

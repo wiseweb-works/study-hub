@@ -121,9 +121,11 @@ export default function NotFound() {
                     <div className="block text-center mt-5">
                         <h5 className="md:text-xl text-lg leading-8 text-gray-900 font-medium mb-1.5">
                             <span className="text-indigo-600 font-semibold ">Oops!</span> It seems
-                            like you've taken a wrong turn
+                            like you&apos;ve taken a wrong turn
                         </h5>
-                        <p className="text-sm text-gray-500">We're working to bring it back.</p>
+                        <p className="text-sm text-gray-500">
+                            We&apos;re working to bring it back.
+                        </p>
                         <Link href="/">
                             <button
                                 type="button"
