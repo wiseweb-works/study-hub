@@ -1,3 +1,5 @@
+import { createNote } from '@/actions/create/createNote';
+
 export default function Page() {
     return (
         <>
@@ -6,7 +8,7 @@ export default function Page() {
                     <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white text-center">
                         Add New Note
                     </h2>
-                    <form action="#" className="space-y-6">
+                    <form action={createNote} className="space-y-6">
                         <div className="grid gap-6 sm:grid-cols-2">
                             <div>
                                 <label
