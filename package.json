@@ -15,7 +15,7 @@
         "@clerk/nextjs": "^6.36.7",
         "@prisma/client": "6.19.1",
         "@prisma/extension-accelerate": "^3.0.1",
-        "next": "15.5.9",
+        "next": "16.1.5",
         "react": "^19.2.3",
         "react-dom": "^19.2.3"
     },
