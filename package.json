@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "next dev --turbopack",
+        "dev": "next dev",
         "build": "next build",
         "start": "next start",
         "postinstall": "prisma generate --no-engine",
@@ -12,31 +12,33 @@
         "write": "prettier . --write"
     },
     "dependencies": {
-        "@clerk/nextjs": "^6.38.0",
+        "@clerk/nextjs": "^7.0.6",
         "@prisma/client": "6.19.2",
         "@prisma/extension-accelerate": "^3.0.1",
-        "next": "15.5.12",
+        "next": "16.2.1",
         "react": "^19.2.4",
         "react-dom": "^19.2.4"
     },
     "devDependencies": {
-        "@eslint/eslintrc": "^3.3.3",
-        "@tailwindcss/postcss": "^4.2.0",
-        "@types/node": "^25.3.0",
+        "@eslint/eslintrc": "^3.3.5",
+        "@tailwindcss/postcss": "^4.2.2",
+        "@types/node": "^25.5.0",
         "@types/react": "^19.2.14",
         "@types/react-dom": "^19.2.3",
-        "eslint": "^9.39.2",
-        "eslint-config-next": "16.1.6",
+        "eslint": "^9.39.4",
+        "eslint-config-next": "16.2.1",
         "eslint-config-prettier": "^10.1.8",
         "prettier": "3.8.1",
         "prisma": "^6.19.2",
-        "tailwindcss": "^4.2.0",
+        "tailwindcss": "^4.2.2",
         "typescript": "^5.9.3"
     },
     "pnpm": {
-        "overrides":{
-            "ajv@<8.18.0": ">=8.18.0",
-            "minimatch@<10.2.1": ">=10.2.1"
+        "overrides": {
+            "@hono/node-server@": ">=1.19.10",
+            "effect@": ">=3.20.0",
+            "hono": ">=4.12.7",
+            "lodash@": ">=4.17.23"
         }
     }
 }
